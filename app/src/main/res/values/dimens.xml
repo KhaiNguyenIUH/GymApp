@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TextView-->
+    <dimen name="textsize">15dp</dimen>
+    <!--Layout-->
+    <dimen name="menu_item_icon_size">24dp</dimen>
+    <dimen name="margin_left_header">30dp</dimen>
+    <dimen name="margin_left_SDT">30dp</dimen>
+    <dimen name="margin_right_SDT">30dp</dimen>
+    <dimen name="margin_right_Pass">30dp</dimen>
+    <dimen name="margin_top_SDT">150dp</dimen>
+    <dimen name="margin_left_Pass">30dp</dimen>
+    <dimen name="margin_top_Pass">50dp</dimen>
+    <dimen name="margin_left_tvSDT">30dp</dimen>
+    <dimen name="margin_left_tvPass">30dp</dimen>
+    <dimen name="margin_top_btnLogin">50dp</dimen>
+    <dimen name="margin_left_QuenMK">30dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>
