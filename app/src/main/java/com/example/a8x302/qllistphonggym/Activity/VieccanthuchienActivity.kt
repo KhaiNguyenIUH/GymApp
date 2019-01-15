@@ -1,11 +1,13 @@
 package com.example.a8x302.qllistphonggym.Activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -13,6 +15,7 @@ import com.example.a8x302.qllistphonggym.Adapter.ViechomnayAdapter
 import com.example.a8x302.qllistphonggym.Adapter.dsAdapter
 import com.example.a8x302.qllistphonggym.Model.Doanhnghiep
 import com.example.a8x302.qllistphonggym.R
+import com.example.a8x302.qllistphonggym.Utils.PreferenceUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_vieccanthuchien.*
 
@@ -21,6 +24,7 @@ class VieccanthuchienActivity : AppCompatActivity(),View.OnClickListener {
     private val mListds = java.util.ArrayList<Doanhnghiep>()
     private var recyclerView: RecyclerView? = null
     private var mAdapter: dsAdapter? = null
+    val utils = PreferenceUtils()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vieccanthuchien)
@@ -40,15 +44,29 @@ class VieccanthuchienActivity : AppCompatActivity(),View.OnClickListener {
         recyclerView!!.itemAnimator = DefaultItemAnimator()
         recyclerView!!.adapter = mAdapter
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
+            R.id.log_out -> {
+                utils.deleteEmail( this)
+                utils.deletePassword( this)
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+                return true
+            }
             android.R.id.home -> {
                 onBackPressed()
                 return true
             }
-            else -> {
-            }
         }
+
         return super.onOptionsItemSelected(item)
     }
     override fun onClick(view: View) {

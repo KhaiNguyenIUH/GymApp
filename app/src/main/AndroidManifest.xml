@@ -9,14 +9,23 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.READ_PROFILE"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
-            android:windowSoftInputMode="adjustResize"
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@mipmap/simple_house_thin"
             android:roundIcon="@mipmap/ic_launcher_round"
+            android:label="QCOOP"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCQfAJtlaBw4cj_SKqhSTEzHlm1yKtGPqc"/>
+
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -33,5 +42,7 @@
         <activity android:name=".Activity.VieccanthuchienActivity">
         </activity>
     </application>
-
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
 </manifest>

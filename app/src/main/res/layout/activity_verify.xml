@@ -38,6 +38,7 @@
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginRight="5dp"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:background="@drawable/rounded_edittext"
             />
@@ -45,16 +46,19 @@
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginRight="5dp"
+                    android:inputType="number"
                     android:textAlignment="center"
             android:background="@drawable/rounded_edittext"/>
             <EditText
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginRight="5dp"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:background="@drawable/rounded_edittext"/>
             <EditText
                     android:layout_width="45dp"
+                    android:inputType="number"
                     android:layout_height="45dp"
                     android:layout_marginRight="5dp"
                     android:textAlignment="center"
@@ -62,12 +66,14 @@
             <EditText
                     android:layout_width="45dp"
                     android:layout_height="45dp"
+                    android:inputType="number"
                     android:layout_marginRight="5dp"
                     android:textAlignment="center"
                     android:background="@drawable/rounded_edittext"/>
             <EditText
                     android:layout_width="45dp"
                     android:layout_height="45dp"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:background="@drawable/rounded_edittext"/>
         </LinearLayout>
